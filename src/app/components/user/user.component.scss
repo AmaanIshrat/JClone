@@ -1,0 +1,295 @@
+/* General container for the entire page */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 00px;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+  }
+  
+  .profile-icon {
+    font-size: 24px;
+  }
+  
+  .profile-name {
+    font-weight: bold;
+  }
+  
+  /* Notification Card */
+  .notification-card {
+    background-color: #f9e5e5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #f44336;
+  }
+  
+  .notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .notification-icon {
+    font-size: 30px;
+    color: #f44336;
+  }
+  
+  .notification-text {
+    flex: 1;
+    font-size: 14px;
+    color: #d32f2f;
+  }
+  
+  .notification-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .notification-actions .btn-primary,
+  .notification-actions .btn-accent {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .btn-accent {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .btn-primary:hover, .btn-accent:hover {
+    opacity: 0.8;
+  }
+  
+  /* Affiliate Report Section */
+  .affiliate-report {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .affiliate-item {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+  }
+  
+  .affiliate-item strong {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Tabs Section */
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .tab:hover {
+    background-color: #dcdcdc;
+  }
+  
+  .tab-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .tab-pane {
+    display: block;
+  }
+  
+  /* Site Item Styling */
+  .site-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .site-icon {
+    font-size: 28px;
+    padding-right: 15px;
+  }
+  
+  .site-details {
+    flex: 1;
+  }
+  
+  .site-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .site-date {
+    font-size: 12px;
+    color: #888;
+  }
+  
+ 
+  
+  /* Support Section */
+  .support-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+ 
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .tabs {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .tab {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .site-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .site-item button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .profile-icon {
+    font-size: 1.5rem;
+  }
+  
+  .profile-name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  /* Profile Menu Styles */
+.profile-menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.profile-menu:hover {
+  background-color: #eaeaea;
+}
+
+.profile-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-email {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 200px;
+  overflow: hidden;
+}
+
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}

@@ -1,0 +1,73 @@
+<div class="pricing-container">
+    <h2 class="pricing-title">Packages of JoonWeb</h2>
+    <p class="pricing-subtitle">Try JoonWeb free for 7 days, no payment information required</p>
+  
+    <!-- Pricing Plan Switch -->
+    <div class="pricing-switch">
+      <button
+        class="switch-button"
+        [class.active]="activeTab === 'informative'"
+        (click)="switchTab('informative')"
+      >
+        Informative
+      </button>
+      <button
+        class="switch-button"
+        [class.active]="activeTab === 'ecommerce'"
+        (click)="switchTab('ecommerce')"
+      >
+        eCommerce
+      </button>
+    </div>
+  
+    <!-- Pricing Plans -->
+    <div class="pricing-grid">
+      <div
+        *ngFor="let plan of activePlans"
+        class="pricing-card"
+      >
+        <div class="card-header">
+          <h3 class="card-title">{{ plan.title }}</h3>
+          <p class="card-subtitle">{{ plan.subtitle }}</p>
+        </div>
+        <div class="card-price-section">
+          <span class="discounted-price">{{ plan.discountedPrice }}</span>
+          <span class="price-period">/P.M.</span>
+          <span class="original-price">{{ plan.originalPrice }}</span>
+        </div>
+        <div class="card-footer">
+          <p class="save-info">{{ plan.saveInfo }}</p>
+          <p class="annual-price">{{ plan.annualPrice }}</p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <!-- Features Table -->
+    <div class="features-table">
+      <h3 class="features-title">Features Included</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Features</th>
+            <th>Landing Page</th>
+            <th>Basic</th>
+            <th>Standard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let feature of features">
+            <td>{{ feature.name }}</td>
+            <td [innerHTML]="feature.landingPage"></td>
+            <td [innerHTML]="feature.basic"></td>
+            <td [innerHTML]="feature.standard"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+ 
+  <app-share style="display: flex; justify-content: center; align-items: center; "></app-share>
+
+  <app-auth-popup #authPopup></app-auth-popup>

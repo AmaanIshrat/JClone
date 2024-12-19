@@ -1,0 +1,108 @@
+/* Footer Styles */
+.footer {
+   
+    color: black !important;
+    padding: 2rem 1rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Top Section */
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: centre;
+    gap: 5rem;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    
+  }
+  .cr{
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+   
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+    
+  .footer-column ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #8f7171;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #0e0622;
+  }
+  
+  /* Middle Section: Social Media */
+  .footer-social {
+    text-align: center;
+    margin-bottom: 2rem;
+   
+  }
+  
+  .footer-social a {
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social a img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .footer-social a:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Bottom Section: Payments */
+  .footer-payments {
+    text-align: center;
+  }
+  
+  .footer-payments h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  .payment-icons img {
+    width: 40px;
+    height: 30px;
+  }
+  

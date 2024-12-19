@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+.main-hero-button {
+    padding: 10px 20px;
+    background-color: #0D3B66;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center; /* Align text and SVG vertically */
+    height: auto;
+    width: auto;
+  }
+  .main-hero-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #0D3B66;
+  }
+  .i-left-margin {
+    margin-left: 8px;
+  }
+
+  //Heading
+  .main-hero-heading {
+    font-size: 36px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color:#0D3B66;
+    margin-bottom: 40px;
+  }

@@ -1,0 +1,80 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo-text {
+    text-decoration: none;
+    color: #ff6600;
+    font-family: 'Georgia', serif;
+  }
+  
+  .logo-text:hover {
+    text-shadow: 0 0 5px #ff6600;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar a.active,
+  .navbar a:hover {
+    color: #ff6600;
+    text-shadow: 0 0 5px #ff6600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      background-color: #444;
+      padding: 1rem;
+      position: absolute;
+      top: 3.5rem;
+      right: 0;
+      width: 200px;
+      display: none;
+      border-radius: 0 0 5px 5px;
+    }
+  
+    .navbar a {
+      margin: 0.5rem 0;
+    }
+  
+    .navbar.open {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  

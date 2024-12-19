@@ -1,0 +1,62 @@
+<div class="popup-overlay" *ngIf="isVisible">
+    <div class="popup-content">
+      <!-- Close Button -->
+      <button class="close-btn" (click)="closePopup()">×</button>
+  
+      <!-- Header -->
+      <h1 class="popup-header">JOONWEB</h1>
+  
+      <!-- Dynamic Content: Sign In or Create Account -->
+      <ng-container [ngSwitch]="popupType">
+        <!-- Sign In -->
+        <div *ngSwitchCase="'signin'" class="form-container">
+          <h2>Sign In</h2>
+          <form #signInForm="ngForm" (ngSubmit)="handleSubmit('signin', signInForm)">
+            <div class="form-group">
+              <input type="email" placeholder="Enter your email" required [(ngModel)]="email" name="email" />
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Enter your password" required [(ngModel)]="password" name="password" />
+            </div>
+            <button type="submit" class="btn-primary">Sign In</button>
+          </form>
+          <p>
+            Don't have an account?
+            <a href="#" class="link" (click)="switchPopup('create-account', $event)">Create Account</a>
+          </p>
+        </div>
+  
+        <!-- Create Account -->
+        <div *ngSwitchCase="'create-account'" class="form-container">
+          <h2>Create an Account</h2>
+          <p>
+            Already have an account?
+            <a href="#" class="link" (click)="switchPopup('signin', $event)">Login</a>
+          </p>
+          <form #createAccountForm="ngForm" (ngSubmit)="handleSubmit('create-account', createAccountForm)">
+            <div class="form-group">
+              <input type="email" placeholder="Enter Your Email Id" required [(ngModel)]="email" name="email" />
+            </div>
+            <div class="form-group">
+              <div class="phone-input">
+                <select>
+                  <option value="+91">IN +91</option>
+                </select>
+                <input type="text" placeholder="Enter your number" required [(ngModel)]="phoneNumber" name="phoneNumber" />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Enter your password" required [(ngModel)]="password" name="password" />
+            </div>
+            <button type="submit" class="btn-primary">Get Started</button>
+          </form>
+          <p class="terms">
+            By signing up, you agree to our
+            <a href="#" class="link">Terms of Use</a> and
+            <a href="#" class="link">Privacy Policy</a>.
+          </p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

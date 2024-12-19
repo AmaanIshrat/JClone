@@ -1,0 +1,208 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure that all elements respect box-sizing */
+* {
+    box-sizing: inherit;
+}
+
+/* Container for the Hero Section */
+.see-width.product-hero-section-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    max-width: 100%; /* Allow full width */
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap; /* Ensure items wrap if needed */
+    overflow-x: hidden; /* Prevent overflow */
+}
+
+/* Product Hero Image */
+.product-hero-image {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Product Image Styling */
+.product-hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Product Hero Text */
+.product-hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    min-width: 0;
+}
+
+/* Category Text */
+.product-hero-category {
+    font-size: 18px;
+    font-weight: 600;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Main Heading */
+.product-hero-heading {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0D3B66;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Subheading */
+.product-hero-subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Button Container */
+.product-hero-button-cont {
+    display: flex;
+    align-items: center;
+}
+
+/* Call-to-Action Button */
+.main-hero-button {
+    padding: 12px 30px;
+    background-color: #0D3B66;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.main-hero-button:hover {
+    background-color: #f4f4f4;
+    color: #0D3B66;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Info Section */
+.products-info-section-box {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden; /* Prevent overflow */
+}
+
+/* Product Info List */
+.product-info-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px;
+    max-width: 100%; /* Ensure no overflow */
+    box-sizing: border-box; /* Include padding/border in width */
+}
+
+/* Individual Product Info Item */
+.product-info {
+    flex: 1;
+    max-width: calc(33.333% - 20px); /* Ensure 3 items fit in one row */
+    min-width: 0; /* Prevent overflow */
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Inner Content Alignment */
+.product-info-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Icon Styling */
+.product-info-icon img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+/* Product Info Text Styling */
+.product-info-line {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-info-line span {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .see-width.product-hero-section-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-hero-text {
+        padding-left: 0;
+    }
+
+    .product-hero-heading {
+        font-size: 28px;
+    }
+
+    .product-hero-subheading {
+        font-size: 16px;
+    }
+
+    .main-hero-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Stack Product Info Items Vertically */
+    .product-info-list {
+        flex-direction: column;
+    }
+
+    .product-info {
+        max-width: 100%; /* Take full width on small screens */
+    }
+}

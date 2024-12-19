@@ -1,0 +1,192 @@
+<div class="see-width product-hero-section-box">
+  <div class="product-hero-image">
+    <img src="https://static.joonsite.com/media/JW_2401161507020489.png" alt="eCommerce Builder">
+  </div>
+  <div class="product-hero-text">
+    <h1 class="product-hero-category">JOONWEB WEBSITE BUILDER</h1>
+  <br>
+    <div class="main-hero-heading" style="text-align: justify;">Create your website with ease</div>
+    <br>
+    <div class="product-hero-subheading"style="text-align: justify;">JoonWeb website builder provides you the creative flexibility and latest
+      features to create a website as per your needs.</div><br>
+    <div class="product-hero-button-cont"> <a href="javascript:void(0);"
+        onclick="twik_pop('website-builder', 'website-pages');" class="main-hero-button">Create a Website
+
+      </a>
+    </div>
+  </div>
+</div>
+<div class="see-width products-info-section-box">
+  <div class="product-info-list">
+    <div class="product-info fade-up">
+      <div class="product-info-inner">
+        <div class="product-info-icon"><img src="https://static.joonsite.com/media/15_days.svg" alt="Free Trail"></div>
+        <div class="product-info-line">15 Days Free Trial<br><span>Try our builder for 15 days without any payment
+            information</span></div>
+      </div>
+    </div>
+    <div class="product-info fade-up">
+      <div class="product-info-inner">
+        <div class="product-info-icon"><img src="https://static.joonsite.com/media/24_7_icon.svg" alt="24/7 Support">
+        </div>
+        <div class="product-info-line">24/7 Call Support<br><span>Our experts will provide unhindered support anytime
+            you want</span></div>
+      </div>
+    </div>
+    <div class="product-info fade-up">
+      <div class="product-info-inner">
+        <div class="product-info-icon"><img src="https://static.joonsite.com/media/15_days.svg"
+            alt="Moneyback guarantee "></div>
+        <div class="product-info-line">MoneyBack Gurantee<br><span>Try JoonWeb for 15 days and if you're not satisfied,
+            get your money back.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- website-features.component.html -->
+<div class="see-width products-features-box">
+  <div class="products-features-cont">
+    <div class="products-features-top">
+      <h2 class="main-hero-heading">Website Builder Features</h2>
+      <div class="product-hero-subheading">
+        Following features at JoonWeb website builder will enable you to create, design, manage and develop websites
+        with <br> an unforgettable user experience.
+      </div>
+    </div>
+    <div class="products-features-list">
+      <!-- Use Angular's *ngFor directive to dynamically loop through the features -->
+      <div class="products-feature" *ngFor="let feature of features">
+        <div class="products-feature-inner">
+          <div class="feature-image-outer">
+            <img [src]="feature.image" class="feature-image" [alt]="feature.category">
+          </div>
+          <div class="feature-content-outer fade-up" style="opacity: 1; transform: translateY(0px);">
+            <div class="feature-content">
+              <h3 class="product-feature-category">{{ feature.category }}</h3>
+              <h2 class="hero-heading">{{ feature.title }}</h2>
+              <div class="hero-subheading">{{ feature.description }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="see-full steps-for-website">
+  <div style="display: flex; justify-content: center; align-items: center; ">
+    <h2 class="main-hero-heading">
+      How to create a website?
+    </h2>
+    
+  </div>
+  <br>
+  <div class="product-hero-subheading ">
+    By following these steps you can create your own website within minutes </div>
+    <div class="see-width sfw-inner">
+      <div class="sfw-cont">
+        <div class="swf-tabpanel">
+          <div class="swf-tabs-content">
+            <div class="swf-tab-content active">
+              <div class="swf-box">
+                <!-- Steps List -->
+                <div class="swf-content">
+                  <ol class="swf-list">
+                    <li *ngFor="let step of steps" class="swf-list-item fade-left" style="opacity: 1; transform: translateY(0px);">
+                      <span class="swf-list-icon">{{ step.number }}</span>
+                      <div class="swf-list-content">
+                        <div class="swf-list-heading">{{ step.heading }}</div>
+                        <div class="swf-list-para">{{ step.description }}</div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                <!-- Step Image -->
+                <div class="swf-image howto">
+                  <img [src]="stepImage" alt="Website Creation Step">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</section>
+<section class="see-full website-templates">
+  <div class="see-width wt-inner">
+    <div class="wt-top">
+      <h2 class="main-hero-heading">
+        Website templates with a professional look </h2>
+        <br>
+      <div class="product-hero-subheading">
+        90 Website templates to meet your business needs. </div>
+    </div>
+    <div class="wt-tabpanel">
+      <div class="wt-tabs-content">
+        <div class="wt-tab-content">
+          <div class="wt-bottom">
+            <div class="wt-templates">
+              <!-- Loop through templates -->
+              <div *ngFor="let template of templates" class="wt-template">
+                <div class="wt-template-inner">
+                  <div class="wt-bottom-part">
+                    <div class="wt-image-outer">
+                      <img [src]="template.imgSrc" class="wt-image" [alt]="template.name">
+                    </div>
+                    <div class="wt-overlay">
+                      <div class="wt-overlay-inner">
+                        <div class="wt-template-name">{{ template.name }}</div>
+                        <a class="wt-preview-icon" target="_blank" [href]="template.previewLink">
+                          <i class="fa-solid fa-eye" aria-hidden="true"></i><span>Preview</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- See All Templates Button -->
+            <div class="wt-button-outer">
+              <a href="#" class="main-hero-button">See all templates</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<section class="see-full lp-faq" itemscope="" itemtype="https://schema.org/FAQPage">
+  <div class="see-width">
+    <div class="see-full">
+      <h2 class="main-hero-heading" style="display: flex; justify-content: center; align-items: center;">
+        Frequently Asked Questions
+      </h2>
+      <br>
+      <div class="product-hero-subheading">
+        FAQ regarding creating a website at JoonWeb Website builder.
+      </div>
+      <br>
+      <div class="accordion">
+        <div class="tabs">
+          <!-- Tab Item Template -->
+          <div *ngFor="let question of faqs; let i = index" class="tab" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <input type="radio" [id]="'rd' + i" name="rd">
+            <label class="tab-label" itemprop="name" [for]="'rd' + i">
+              <h3>{{ question.question }}</h3>
+            </label>
+            <div class="tab-content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <span itemprop="text">{{ question.answer }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</section>
+<app-share style="display: flex; justify-content: center; align-items: center;"></app-share>
+
+<app-auth-popup #authPopup></app-auth-popup>

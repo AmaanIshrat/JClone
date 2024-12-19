@@ -1,0 +1,282 @@
+/* General Styles */
+body {
+    font-size: 36px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color:#0D3B66;
+  
+    
+  }
+  
+  /* Container */
+  .pricing-container {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    
+    margin: 100px;
+   
+  }
+  
+  /* Title */
+  .pricing-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+    color:#0D3B66;
+  }
+  
+  .pricing-subtitle {
+    font-size: 1.1rem;
+    color:#0D3B66;
+    margin-bottom: 30px;
+  }
+  
+  /* Switch Buttons */
+  .pricing-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+  
+  .switch-button {
+    padding: 10px 20px;
+   
+    cursor: pointer;
+    background-color: #fff;
+    color:#0D3B66;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .switch-button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .switch-button.active {
+    background-color:#0D3B66;;
+    color: #fff;
+  }
+  
+  /* Pricing Cards */
+  .pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .pricing-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Card Header */
+  .card-header {
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#0D3B66;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Price Section */
+  .card-price-section {
+    font-size: 1.8rem;
+    margin: 20px 0;
+  }
+  
+  .discounted-price {
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .price-period {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .original-price {
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 10px;
+  }
+  
+  /* Card Footer */
+  .card-footer {
+    margin-top: 20px;
+  }
+  
+  .save-info {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .annual-price {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+
+  /* Features Table */
+  .features-table {
+    margin-top: 40px;
+  }
+  
+  .features-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#0D3B66;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background-color: #f9faff;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  
+  th {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .check-icon {
+    color: #28a745;
+    font-size: 1.2rem;
+  }
+  
+  .cross-icon {
+    color: #e74c3c;
+    font-size: 1.2rem;
+  }
+  /* Overall container style */
+.see-width.qa-inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+/* Styling for the main heading */
+// .main-hero-heading {
+//   font-size: 36px;
+//   font-family: 'Raleway', sans-serif;
+//   font-weight: 800;
+//   color:#0D3B66;
+  
+// }
+
+/* Subheading style */
+.section-subheading {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Styling for the button container */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Main button style */
+// .main-hero-button {
+//   padding: 10px 20px;
+//   background-color: #0D3B66;
+//   color: white;
+//   text-decoration: none;
+//   font-weight: bold;
+//   border-radius: 20px;
+//   height: 25px;
+//   width: 18%;
+//   align-content: center;
+// }
+
+// .main-hero-button:hover {
+//   background-color: white;
+//   color:black;
+//   border: 1px solid black;
+// }
+
+/* Arrow icon next to button */
+
+
+
+
+/* Fade-in effect for animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure responsive behavior */
+@media (max-width: 768px) {
+  .main-hero-heading {
+    font-size: 28px;
+  }
+
+  .section-subheading {
+    font-size: 16px;
+  }
+
+  .main-hero-button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .main-hero-button .i-left-margin {
+    width: 12px;
+    height: 12px;
+  }
+}
