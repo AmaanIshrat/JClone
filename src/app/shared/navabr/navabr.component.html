@@ -91,7 +91,6 @@
 
                     <!-- Dropdown menu -->
                     <div class="dropdown-menu" *ngIf="dropdownVisible">
-
                         <a (click)="navigateToDashboard()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 512 512">
                                 <path
@@ -108,8 +107,8 @@
                 </div>
 
             </div>
-            <!-- Sign In Link -->
-            <ng-template #guest>
+             <!-- Sign In Link -->
+             <ng-template #guest>
                 <a (click)="authPopup.showPopup('signin')" class="sign-in-link">Sign In</a>
 
                 <!-- Get Started Link -->
@@ -126,14 +125,9 @@
                 </div>
             </ng-template>
 
-
-            <!-- Popup Component -->
-            <app-auth-popup #authPopup></app-auth-popup>
-
             <!-- Menu Icon for Mobile -->
-            <div class="nh-menu-icon">
+            <div class="nh-menu-icon" (click)="toggleMobileMenu()">
                 <div class="nh-menu-icon-inner">
-                    <!-- <input type="checkbox" class="header-hidden-checkbox"> -->
                     <svg class="open" xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 448 512">
                         <path
                             d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z">
@@ -146,6 +140,20 @@
                     </svg>
                 </div>
             </div>
+
+            <!-- Mobile Menu -->
+            <div class="nh-mobile-menu" [class.open]="mobileMenuOpen">
+                <ul class="nh-mobile-nav-items">
+                    <li class="nh-mobile-nav-item"><a href="/home" class="nh-mobile-nav-item-link">Home</a></li>
+                    <li class="nh-mobile-nav-item"><a href="/products" class="nh-mobile-nav-item-link">Products</a></li>
+                    <li class="nh-mobile-nav-item"><a href="/pricing" class="nh-mobile-nav-item-link">Pricing</a></li>
+                    <li class="nh-mobile-nav-item"><a href="/sites" class="nh-mobile-nav-item-link">Templates</a></li>
+                    <li class="nh-mobile-nav-item"><a href="/support" class="nh-mobile-nav-item-link">Support</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
+
+            <!-- Popup Component -->
+  <app-auth-popup #authPopup></app-auth-popup>

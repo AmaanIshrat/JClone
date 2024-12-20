@@ -47,4 +47,12 @@ export class NavabrComponent implements OnInit {
   toggleDropdown(): void {
     this.dropdownVisible = !this.dropdownVisible;
   }
+  
+  mobileMenuOpen = false;
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  
 }
