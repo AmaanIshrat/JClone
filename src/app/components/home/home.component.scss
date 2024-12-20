@@ -5,10 +5,13 @@
     align-items: center;
     max-width: 100%; /* Constrain large elements */
     overflow: hidden;
-    
   
-    
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
   
   /* Styling for the left side (content) */
   .main-hero-text {
@@ -20,7 +23,26 @@
  
   
   
- 
+  .main-hero-button {
+    padding: 10px 20px;
+    background-color: #0D3B66;
+    color: white;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center; /* Align text and SVG vertically */
+    height: auto;
+    width: auto;
+  }
+  .main-hero-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #0D3B66;
+  }
+  .i-left-margin {
+    margin-left: 8px;
+  }
   
   /* Styling for the icon inside the button */
   .main-hero-button svg {
@@ -44,24 +66,24 @@
   }
   
   /* Media query for smaller screens (e.g., mobile view) */
-  @media (max-width: 768px) {
-    .wt-tabs-inner {
-      flex-direction: column;
-      gap: 1rem;
-    }
+  // @media (max-width: 768px) {
+  //   .wt-tabs-inner {
+  //     flex-direction: column;
+  //     gap: 1rem;
+  //   }
   
-    .wt-tab {
-      width: 100px;
-      height: 100px;
-      font-size: 0.9rem;
-    }
-  }
+  //   .wt-tab {
+  //     width: 100px;
+  //     height: 100px;
+  //     font-size: 0.9rem;
+  //   }
+  // }
   /* General styles */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-  }
+  // body {
+  //   font-family: Arial, sans-serif;
+  //   background-color: #f4f4f4;
+  //   color: #333;
+  // }
   
   .wt-tabs-content {
     margin: 20px;
@@ -526,7 +548,7 @@
   }
   
   .see-full {
-    max-width: 900px;
+    max-width: 70%;
     margin: 0 auto;
   }
   
@@ -615,4 +637,24 @@
   .switch-button.active {
     background-color:#0D3B66;;
     color: #fff;
+  }
+  @media (max-width: 768px) {
+    .see-width.main-hero-section-box {
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+  
+    .main-hero-text {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .main-hero-image img {
+      max-width: 100%;
+    }
+    .swf-image {
+      max-width: 100%;
+     
+  }
   }

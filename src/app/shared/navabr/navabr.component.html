@@ -133,22 +133,75 @@
                             d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z">
                         </path>
                     </svg>
-                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 384 512">
+                    <!-- <svg class="close" xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 384 512">
                         <path
                             d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
                         </path>
-                    </svg>
+                    </svg> -->
                 </div>
             </div>
 
             <!-- Mobile Menu -->
             <div class="nh-mobile-menu" [class.open]="mobileMenuOpen">
                 <ul class="nh-mobile-nav-items">
-                    <li class="nh-mobile-nav-item"><a href="/home" class="nh-mobile-nav-item-link">Home</a></li>
-                    <li class="nh-mobile-nav-item"><a href="/products" class="nh-mobile-nav-item-link">Products</a></li>
-                    <li class="nh-mobile-nav-item"><a href="/pricing" class="nh-mobile-nav-item-link">Pricing</a></li>
-                    <li class="nh-mobile-nav-item"><a href="/sites" class="nh-mobile-nav-item-link">Templates</a></li>
-                    <li class="nh-mobile-nav-item"><a href="/support" class="nh-mobile-nav-item-link">Support</a></li>
+                    <div class="nh-nav-inner">
+                        <ul class="nh-nav-items">
+                            <li class="nh-nav-item"> <a href="/home" class="nh-nav-item-link">Home</a></li>
+                            <li class="nh-nav-item nh-has-sub">
+                                <a href="#" class="nh-nav-item-link">
+                                    Products
+                                    <span class="nh-dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 448 512">
+                                            <path
+                                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <div class="nh-submenu">
+                                    <ul class="nh-nav-subitems">
+                                        <li class="nh-nav-subitem">
+                                            <a [routerLink]="'/products/web'" class="nh-nav-subitem-link">Website
+                                                Builder</a>
+                                        </li>
+                                        <li class="nh-nav-subitem">
+                                            <a [routerLink]="'/products/ecom'" class="nh-nav-subitem-link">eCommerce
+                                                Builder</a>
+                                        </li>
+                                        <li class="nh-nav-subitem">
+                                            <a [routerLink]="'/products/buy-domain'" class="nh-nav-subitem-link">Buy
+                                                Domain</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+    
+                            <li class="nh-nav-item"> <a href="/price" class="nh-nav-item-link">Pricing</a></li>
+                            <li class="nh-nav-item"> <a href="/sites" class="nh-nav-item-link">Templates</a></li>
+                            <li class="nh-nav-item nh-has-sub">
+                                <a href="#" class="nh-nav-item-link">Support
+                                    <span class="nh-dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 448 512">
+                                            <path
+                                                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+    
+                                <div class="nh-submenu">
+                                    <ul class="nh-nav-subitems">
+                                        <li class="nh-nav-subitem">
+                                            <a href="" target="_blank" class="nh-nav-subitem-link">Help Center</a>
+                                        </li>
+                                        <li class="nh-nav-subitem">
+                                            <a href="" class="nh-nav-subitem-link">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </ul>
             </div>
         </div>
