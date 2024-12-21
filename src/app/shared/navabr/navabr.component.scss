@@ -1,282 +1,237 @@
-    .new-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-    }
-    * {
-        box-sizing: border-box;
-      }
-
-    .nh-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-
+/* General Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  .new-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .nh-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .nh-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nh-logo img {
+    width: 145px;
+    object-fit: contain;
+  }
+  
+  .nh-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+  }
+  
+  .nh-nav-items {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+  }
+  
+  .nh-nav-item {
+    position: relative;
+    margin-left: 30px;
+  }
+  
+  .nh-nav-item-link {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  .nh-nav-item:hover .nh-nav-item-link {
+    color: #007BFF;
+  }
+  
+  .nh-has-sub:hover .nh-submenu {
+    display: block;
+  }
+  
+  .nh-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .nh-nav-subitems {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nh-nav-subitem {
+    padding: 8px 0;
+  }
+  
+  .nh-nav-subitem-link {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .nh-nav-subitem-link:hover {
+    color: #007BFF;
+  }
+  
+  .nh-user-guest {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nh-user-guest span,
+  .nh-user-guest a {
+    margin-left: 20px;
+  }
+  
+  /* Styling for the "Sign In" link */
+  .sign-in-link {
+    color: #0D3B66;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nh-user-guest a:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  
+  .profile-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .profile-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .profile-email {
+    font-size: 14px;
+    color: #333;
+    margin-right: 2px;
+  }
+  
+  .nh-menu-icon {
+    display: none;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    min-width: 180px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    padding: 12px 16px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-menu a:hover {
+    background: linear-gradient(135deg, #6b8bff, #9cb9ff);
+    color: #fff;
+    transform: translateX(5px);
+  }
+  
+  /* Mobile Menu */
+  .nh-mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    z-index: 200;
+  }
+  
+  .nh-mobile-menu.open {
+    display: block;
+  }
+  
+  .nh-menu-icon {
+    display: none;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
     .nh-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    //   flex-direction: row-reverse;
+      justify-content: space-between;
     }
-
-
-    .nh-logo img {
-        width: 145px;
-        object-fit: contain;
-    }
-
-
+  
     .nh-nav-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 3;
+      display: none;
     }
-
-    .nh-nav-items {
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-    }
-
-    .nh-nav-item {
-        position: relative;
-        margin-left: 30px;
-    }
-
-    .nh-nav-item-link {
-        font-size: 16px;
-        color: #333;
-        text-decoration: none;
-        padding: 10px;
-        display: block;
-    }
-
-    .nh-nav-item:hover .nh-nav-item-link {
-        color: #007BFF;
-    }
-
-
-    .nh-has-sub:hover .nh-submenu {
-        display: block;
-    }
-
-    .nh-submenu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 200px;
-        padding: 10px;
-    }
-
-    .nh-nav-subitems {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .nh-nav-subitem {
-        padding: 8px 0;
-    }
-
-    .nh-nav-subitem-link {
-        color: #333;
-        text-decoration: none;
-    }
-
-    .nh-nav-subitem-link:hover {
-        color: #007BFF;
-    }
-
-
-    .nh-user-guest {
-        display: flex;
-        align-items: center;
-    }
-
-    .nh-user-guest span,
-    .nh-user-guest a {
-        margin-left: 20px;
-    }
-
-    /* Styling for the "Sign In" link */
-    .sign-in-link {
-        color: #0D3B66; /* Adjust color as needed */
-        text-decoration: none; /* Remove underline */
-        font-weight: bold; /* Make the text bold */
-        margin-right: 20px;
-        cursor: pointer; /* Add spacing between "Sign In" and "Get Started" */
-    }
-    
-    
-    
-    /* Center container to flex layout */
-    .center-container {
-        display: flex;
-        justify-content: flex-end; /* Aligns the button to the right */
-        align-items: center; /* Centers items vertically */
-    }
-    
-
-    
-
-    .nh-user-guest a:hover {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-    }
-
-
+  
     .nh-menu-icon {
-        display: none;
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
     }
-
-    @media (max-width: 768px) {
-        .nh-inner {
-            flex-wrap: wrap;
-        }
-        
-
-        .nh-menu-icon {
-            display: block;
-            cursor: pointer;
-        }
-
-        .nh-nav-container {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            text-align: center;
-        }
-
-        .nh-menu-icon.active + .nh-nav-container,
-        .nh-nav-container.open {
-            display: flex;
-        }
-
-        .nh-nav-items {
-            flex-direction: column;
-            align-items: center;
-            padding-left: 0;
-            gap: 10px;
-        }
-
-        .nh-nav-item {
-            margin-left: 0;
-        }
-
-        .nh-user-guest {
-            margin-top: 10px;
-        }
-        .nh-mobile-menu { 
-            display: flex;
-        }
-    }
-
-    .profile-menu {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        
-    }
-    
-    .profile-logo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-    
-    }
-    
-    .profile-email {
-        font-size: 14px;
-        color: #333;
-        margin-right: 2px;
-    }
-    .profile-menu {
-        position: relative; /* For positioning the dropdown menu */
-        display: inline-block; /* Ensure proper inline positioning */
-        cursor: pointer;
-    }
-    
-    .profile-logo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%; /* Make the image circular */
-        object-fit: cover;
-        vertical-align: middle;
-    }
-    
-    .profile-email {
-        margin-left: 10px;
-        font-size: 16px;
-        color: #555;
-        font-weight: 500;
-    }
-    
-    .nh-dropdown-icon {
-        margin-left: 5px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Subtle gradient background */
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevation effect */
-        z-index: 1000;
-        overflow: hidden; /* Ensure the content stays within the rounded corners */
-        min-width: 180px;
-        cursor: pointer;
-    }
-    
-    .dropdown-menu a {
-        display: block;
-        color: #555; /* Neutral text color */
-        text-decoration: none;
-        padding: 12px 16px;
-        font-size: 15px;
-        transition: all 0.3s ease; /* Smooth transition for hover effects */
-    }
-    
-    .dropdown-menu a:hover {
-        background: linear-gradient(135deg, #6b8bff, #9cb9ff); /* Gradient hover effect */
-        color: #fff; /* White text on hover */
-        transform: translateX(5px); /* Slight animation to the right */
-    }
-    /* Add space between the icon and the text */
-    .dropdown-menu a svg {
-        margin-right: 8px;  /* Space between the icon and text */
-        fill: #555;  /* Set icon color */
-        transition: fill 0.3s ease;  /* Smooth transition for icon color on hover */
-    }
+  
     .nh-mobile-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
-        z-index: 200;
+      display: none;
+      flex-direction: column;
+      list-style-type: none;
+      text-align: center;
     }
-    
+  
     .nh-mobile-menu.open {
-        display: block;
+      display: flex;
     }
-    
-    .nh-menu-icon {
-        cursor: pointer;
+  
+    .nh-nav-item {
+      margin: 10px 0;
     }
-    
+  
+    .profile-menu {
+      justify-content: center;
+    }
+  }
+  
