@@ -9,7 +9,7 @@
 .pricing-container {
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  padding: 100px;
+  padding: 80px 20px; /* Reduced padding for better responsiveness */
 }
 
 /* Title */
@@ -67,6 +67,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
   border-radius: 15px;
   max-width: 300px;
+  width: 100%;
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -134,10 +135,6 @@
 }
 
 /* Features Table */
-// .features-table {
-//   margin-top: 40px;
-// }
-
 .features-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -227,9 +224,6 @@ th {
   .pricing-title {
     font-size: 2rem;
   }
-  // .features-table {
-  //   display: block;
-  // }
 
   .pricing-subtitle {
     font-size: 1rem;
@@ -253,8 +247,8 @@ th {
   }
 
   .pricing-card {
-    max-width: 100%;
-    width: 90%;
+    max-width: 90%; /* Take up most of the screen width */
+    margin: 0 auto;
   }
 
   /* Features Table */
@@ -263,7 +257,9 @@ th {
   }
 
   table {
-    font-size: 0.9rem;
+    width: 100%;
+    max-width: none; /* Remove max-width to make the table take up full width */
+    font-size: 0.85rem; /* Reduce font size slightly for mobile */
   }
 
   th, td {
@@ -281,7 +277,9 @@ th {
   }
 }
 
+/* Mobile View for smaller screens (max-width: 480px) */
 @media (max-width: 480px) {
+
   /* Mobile-specific adjustments */
   .pricing-title {
     font-size: 1.8rem;
@@ -297,6 +295,7 @@ th {
 
   .pricing-card {
     padding: 15px;
+    width: 100%; /* Full width */
   }
 
   .card-title {
