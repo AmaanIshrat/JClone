@@ -76,6 +76,7 @@
   padding: 10px;
 }
 
+
 .nh-nav-subitems {
   list-style-type: none;
   padding: 0;
@@ -247,5 +248,21 @@
   .nh-nav-subitems {
     list-style-type: none;
     padding: 0;
+  }
+  .sign-in-link {
+    color: #0D3B66;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .main-hero-button {
+    font-size: 14px;  /* Make the button text smaller */
+    padding: 10px 15px;  /* Adjust padding */
+  }
+
+  .sign-in-link {
+    font-size: 14px;  /* Make the sign-in link smaller */
+    padding: 5px 10px;  /* Adjust padding */
   }
 }

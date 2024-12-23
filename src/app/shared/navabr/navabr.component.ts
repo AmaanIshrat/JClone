@@ -54,5 +54,22 @@ export class NavabrComponent implements OnInit {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 
+  // mobileMenuOpen = false;
+  showProductsDropdown = false;
+  showSupportDropdown = false;
+
+  // toggleMobileMenu() {
+  //   this.mobileMenuOpen = !this.mobileMenuOpen;
+  // }
+  toggleDropdown1(type: string, event: MouseEvent) {
+    event.stopPropagation(); // Prevent the click event from propagating
+    if (type === 'products') {
+      this.showProductsDropdown = !this.showProductsDropdown;
+      this.showSupportDropdown = false; // Close the support dropdown
+    } else if (type === 'support') {
+      this.showSupportDropdown = !this.showSupportDropdown;
+      this.showProductsDropdown = false; // Close the products dropdown
+    }
+  }
   
 }
