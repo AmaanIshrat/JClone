@@ -129,5 +129,6 @@ export class WebComponent {
     //   previewLink: 'https://www.joonweb.com/templates/detail/fashion-clothes',
     // }
   ];
+  
 
 }

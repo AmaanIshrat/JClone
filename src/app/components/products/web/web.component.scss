@@ -39,14 +39,7 @@
        font-family: 'Raleway', sans-serif;
      }
 
-    //  .product-hero-heading {
-    //    font-size: 36px;
-    //    font-family: 'Raleway', sans-serif;
-    //    font-weight: 800;
-    //    color: #0D3B66;
-    //    margin-bottom: 20px;
-    //    text-align: center;
-    //  }
+   
 
      .product-hero-subheading {
        font-size: 1rem;
@@ -803,3 +796,17 @@
          font-size: 0.9rem;
        }
      }
+     @media (max-width: 768px) {
+      .product-info {
+        flex: 1 1 100%; /* Each item takes full width on small screens */
+      }
+      
+      .product-info-icon img {
+        width: 50px;
+        height: 50px;
+      }
+    
+      .product-info-line {
+        font-size: 14px;
+      }
+    }
