@@ -109,9 +109,5 @@ export class HomeComponent {
     }
     // Add more store templates here
   ];
-  // openTemplate(url: string, event: Event): void {
-  //   event.preventDefault(); // Prevent default navigation
-  //   const fullUrl = `${window.location.origin}${url}`;
-  //   window.open(fullUrl, '_blank'); // Open in a new tab
-  // }
+ 
 }

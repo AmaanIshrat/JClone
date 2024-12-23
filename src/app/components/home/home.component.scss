@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .see-width.main-hero-section-box {
     display: flex;
     justify-content: space-between;
@@ -7,11 +11,7 @@
     overflow: hidden;
   
   }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
   
   /* Styling for the left side (content) */
   .main-hero-text {
@@ -619,6 +619,7 @@
     .see-width.main-hero-section-box {
       flex-direction: column;
       text-align: center;
+      padding: 50px;
     }
     .main-hero-text {
       padding-right: 0;
