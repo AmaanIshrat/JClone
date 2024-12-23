@@ -206,7 +206,11 @@
     justify-content: space-between;
     
   }
-
+  .profile-menu {
+    position: absolute; /* Ensures positioning relative to the nearest positioned ancestor */
+    right: 100px; /* Moves the element to the right edge of its container */
+    top: -5px; /* Optional: Adjust the vertical positioning */
+  }
   .nh-nav-container {
     display: none;
   }
@@ -219,9 +223,9 @@
 
   .nh-mobile-menu {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     list-style-type: none;
-    text-align: center;
+    // text-align: center;
   }
 
   .nh-mobile-menu.open {
@@ -236,7 +240,7 @@
     justify-content: center;
   }
   .nh-submenu {
-    display: none;
+    
     position: absolute;
     top: 100%;
     left: 0;

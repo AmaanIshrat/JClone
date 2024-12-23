@@ -19,6 +19,7 @@
               <input type="password" placeholder="Enter your password" required [(ngModel)]="password" name="password" />
             </div>
             <button type="submit" class="btn-primary">Sign In</button>
+           
           </form>
           <p>
             Don't have an account?
@@ -32,7 +33,10 @@
           <p>
             Already have an account?
             <a href="#" class="link" (click)="switchPopup('signin', $event)">Login</a>
+            <br>
+            <button type="submit" class="btn-primary">Login with google</button>
           </p>
+          
           <form #createAccountForm="ngForm" (ngSubmit)="handleSubmit('create-account', createAccountForm)">
             <div class="form-group">
               <input type="email" placeholder="Enter Your Email Id" required [(ngModel)]="email" name="email" />

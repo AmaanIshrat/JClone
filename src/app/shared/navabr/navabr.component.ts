@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,HostListener} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AuthPopupComponent } from '../../components/authpopup/authpopup.component';
 import { FormsModule } from '@angular/forms';
@@ -54,22 +54,31 @@ export class NavabrComponent implements OnInit {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 
-  // mobileMenuOpen = false;
-  showProductsDropdown = false;
-  showSupportDropdown = false;
+ 
+  
+  
+  showProductsDropdown: boolean = false;
+  showSupportDropdown: boolean = false;
 
-  // toggleMobileMenu() {
-  //   this.mobileMenuOpen = !this.mobileMenuOpen;
-  // }
-  toggleDropdown1(type: string, event: MouseEvent) {
-    event.stopPropagation(); // Prevent the click event from propagating
-    if (type === 'products') {
+  toggleDropdown1(menu: string, event: Event): void {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (menu === 'products') {
       this.showProductsDropdown = !this.showProductsDropdown;
-      this.showSupportDropdown = false; // Close the support dropdown
-    } else if (type === 'support') {
+      this.showSupportDropdown = false; // Close the other dropdown
+    } else if (menu === 'support') {
       this.showSupportDropdown = !this.showSupportDropdown;
-      this.showProductsDropdown = false; // Close the products dropdown
+      this.showProductsDropdown = false; // Close the other dropdown
     }
   }
-  
+
+  @HostListener('document:click')
+  closeDropdowns(): void {
+    this.showProductsDropdown = false;
+    this.showSupportDropdown = false;
+  }
+  closeMobileMenu(): void {
+    this.mobileMenuOpen = false;
+  }
 }

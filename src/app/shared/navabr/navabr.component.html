@@ -144,7 +144,7 @@
                     <ul class="nh-nav-items">
                       <!-- Home Link -->
                       <li class="nh-nav-item">
-                        <a href="/home" class="nh-nav-item-link">Home</a>
+                        <a href="/home" class="nh-nav-item-link" (click)="closeMobileMenu()">Home</a>
                       </li>
               
                       <!-- Products Dropdown -->
@@ -160,13 +160,13 @@
                         <div class="nh-submenu" *ngIf="showProductsDropdown">
                           <ul class="nh-nav-subitems">
                             <li class="nh-nav-subitem">
-                              <a [routerLink]="'/products/web'" class="nh-nav-subitem-link">Website Builder</a>
+                              <a [routerLink]="'/products/web'" class="nh-nav-subitem-link" (click)="closeMobileMenu()">Website Builder</a>
                             </li>
                             <li class="nh-nav-subitem">
-                              <a [routerLink]="'/products/ecom'" class="nh-nav-subitem-link">eCommerce Builder</a>
+                              <a [routerLink]="'/products/ecom'" class="nh-nav-subitem-link" (click)="closeMobileMenu()">eCommerce Builder</a>
                             </li>
                             <li class="nh-nav-subitem">
-                              <a [routerLink]="'/products/buy-domain'" class="nh-nav-subitem-link">Buy Domain</a>
+                              <a [routerLink]="'/products/buy-domain'" class="nh-nav-subitem-link" (click)="closeMobileMenu()">Buy Domain</a>
                             </li>
                           </ul>
                         </div>
@@ -174,7 +174,7 @@
               
                       <!-- Pricing Link -->
                       <li class="nh-nav-item">
-                        <a href="/price" class="nh-nav-item-link">Pricing</a>
+                        <a href="/price" class="nh-nav-item-link" (click)="closeMobileMenu()">Pricing</a>
                       </li>
               
                       <!-- Support Dropdown -->
@@ -190,10 +190,10 @@
                         <div class="nh-submenu" *ngIf="showSupportDropdown">
                           <ul class="nh-nav-subitems">
                             <li class="nh-nav-subitem">
-                              <a href="" target="_blank" class="nh-nav-subitem-link">Help Center</a>
+                              <a href="" target="_blank" class="nh-nav-subitem-link" (click)="closeMobileMenu()">Help Center</a>
                             </li>
                             <li class="nh-nav-subitem">
-                              <a href="" class="nh-nav-subitem-link">Contact Us</a>
+                              <a href="" class="nh-nav-subitem-link" (click)="closeMobileMenu()">Contact Us</a>
                             </li>
                           </ul>
                         </div>
@@ -202,6 +202,8 @@
                   </div>
                 </ul>
               </div>
+              
+              
               
               
         </div>
