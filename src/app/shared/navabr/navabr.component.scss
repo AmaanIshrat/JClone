@@ -225,7 +225,7 @@
     display: none;
     flex-direction: row;
     list-style-type: none;
-    // text-align: center;
+    text-align: center;
   }
 
   .nh-mobile-menu.open {
@@ -261,12 +261,16 @@
     cursor: pointer;
   }
   .main-hero-button {
-    font-size: 14px;  /* Make the button text smaller */
-    padding: 10px 15px;  /* Adjust padding */
+    font-size: 8px; /* Reduce the button text size further */
+    padding: 5px 10px; /* Decrease the padding */
   }
-
+  
   .sign-in-link {
-    font-size: 14px;  /* Make the sign-in link smaller */
-    padding: 5px 10px;  /* Adjust padding */
+    font-size: 8px;
+    padding: 0px 5px;
+    margin-left: 25px; /* Shift it to the right */
+  }
+  .i-left-margin{
+    width: 10px;
   }
 }
